@@ -32,7 +32,7 @@ public class NotificationModel implements Serializable {
     private LocalDateTime creationDate;
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private NotificationStatus userStatus;
+    private NotificationStatus notificationStatus;
 
     public UUID getNotificationId() {
         return notificationId;
@@ -54,7 +54,11 @@ public class NotificationModel implements Serializable {
         return creationDate;
     }
 
-    public NotificationStatus getUserStatus() {
-        return userStatus;
+    public NotificationStatus getNotificationStatus() {
+        return notificationStatus;
+    }
+
+    public void setNotificationStatus(NotificationStatus notificationStatus) {
+        this.notificationStatus = notificationStatus;
     }
 }
